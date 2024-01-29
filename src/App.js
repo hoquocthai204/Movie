@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 import Routes from "./config/Routes";
+import ScrollTopComponent from "./components/common/ScrollTopComponent";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <Routes />
       <Footer />
+      <ScrollTopComponent />
     </>
   );
 }
