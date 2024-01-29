@@ -18,6 +18,7 @@ const ScrollTopComponent = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <button
       onClick={() => {
