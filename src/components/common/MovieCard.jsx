@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import Button from "../button/Button";
+import Button from "./Button";
 
 import apiConfig from "../../api/apiConfig";
 import { category } from "../../api/tmdbApi";

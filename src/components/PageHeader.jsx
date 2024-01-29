@@ -1,6 +1,6 @@
 import React from "react";
 
-import bg from "../../assets/footer-bg.jpg";
+import bg from "../assets/footer-bg.jpg";
 
 const PageHeader = (props) => {
   return (

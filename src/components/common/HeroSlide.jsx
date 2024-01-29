@@ -3,8 +3,8 @@ import React, { useEffect, useRef, useState } from "react";
 import SwiperCore, { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import Button, { OutlineButton } from "../button/Button";
-import Modal, { ModalContent } from "../modal/Modal";
+import Button, { OutlineButton } from "./Button";
+import Modal, { ModalContent } from "./Modal";
 
 import apiConfig from "../../api/apiConfig";
 import tmdbApi, { category, movieType } from "../../api/tmdbApi";

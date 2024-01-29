@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import tmdbApi, { category } from "../../api/tmdbApi";
+import tmdbApi, { category } from "../api/tmdbApi";
 
-import MovieCard from "../movie-card/MovieCard";
+import MovieCard from "./common/MovieCard";
 
 const MovieList = (props) => {
   const [items, setItems] = useState([]);
@@ -28,6 +28,7 @@ const MovieList = (props) => {
       }
       setItems(response.results);
     };
+
     getList();
   }, []);
 

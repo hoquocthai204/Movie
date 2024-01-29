@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 
 import { Link, useLocation } from "react-router-dom";
 
-import logo from "../../assets/infi_movie.png";
+import logo from "../assets/infi_movie.png";
 
 const headerNav = [
   {

@@ -2,8 +2,8 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-import bg from "../../assets/footer-bg.jpg";
-import logo from "../../assets/infi_movie.png";
+import bg from "../assets/footer-bg.jpg";
+import logo from "../assets/infi_movie.png";
 
 const Footer = () => {
   return (

@@ -7,7 +7,7 @@ import apiConfig from "../../api/apiConfig";
 import CastList from "./CastList";
 import VideoList from "./VideoList";
 
-import MovieList from "../../components/movie-list/MovieList";
+import MovieList from "../../components/MovieList";
 
 const Detail = () => {
   const { category, id } = useParams();
