@@ -1,0 +1,19 @@
+// Base
+@import "./base/breakpoint";
+@import "./base/index";
+@import "./base/mixin";
+@import "./base/variables";
+@import "./base/common";
+
+// components;
+@import "./components/button.scss";
+@import "./components/detail.scss";
+@import "./components/footer.scss";
+@import "./components/header.scss";
+@import "./components/hero-slide.scss";
+@import "./components/input.scss";
+@import "./components/modal.scss";
+@import "./components/movie-card.scss";
+@import "./components/movie-grid.scss";
+@import "./components/movie-list.scss";
+@import "./components/page-header.scss";
