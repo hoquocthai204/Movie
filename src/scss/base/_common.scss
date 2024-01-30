@@ -80,5 +80,6 @@ iframe {
 }
 
 .section__header {
+  cursor: pointer;
   @include flex(center, space-between);
 }

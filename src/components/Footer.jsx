@@ -6,13 +6,16 @@ import bg from "../assets/footer-bg.jpg";
 import logo from "../assets/infi_movie.png";
 
 const Footer = () => {
+  const handleScrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <div className="footer" style={{ backgroundImage: `url(${bg})` }}>
       <div className="footer__content container">
-        <div className="footer__content__logo">
+        <div className="footer__content__logo" onClick={handleScrollTop}>
           <div className="logo">
             <img src={logo} alt="" />
-            <Link to="/">InfiMovies</Link>
+            <Link to="/">InfiMovie</Link>
           </div>
         </div>
         <div className="footer__content__menus">
