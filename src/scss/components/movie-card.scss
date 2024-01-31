@@ -15,6 +15,15 @@
     right: 10px;
     text-shadow: 0 0 3px black;
     transition: all 0.2s ease;
+
+    font-size: 1.125em;
+    line-height: 1.4;
+
+    // ellipsis text
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 
   &:hover {
@@ -46,11 +55,11 @@
 
   @media (hover: hover) and (pointer: fine) {
     &:hover::before {
-      opacity: 0.8;
+      opacity: 0.6;
     }
 
     &:hover .btn {
-      transform: translate(-50%, -50%) scale(1);
+      transform: translate(-50%, -50%) scale(0.8);
     }
   }
 }

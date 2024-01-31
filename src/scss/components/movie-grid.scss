@@ -12,6 +12,10 @@
 
   &__loadmore {
     text-align: center;
+
+    button {
+      padding: 0.8rem 2rem !important;
+    }
   }
 }
 
@@ -19,6 +23,7 @@
   position: relative;
   width: 100%;
   max-width: 500px;
+  margin: 0 auto;
 
   input {
     width: 100%;

@@ -13,7 +13,7 @@ const MovieGrid = (props) => {
   const [page, setPage] = useState(1);
   const [totalPage, setTotalPage] = useState(0);
 
-  const { keyword } = useParams();
+  const { keyword, type } = useParams();
 
   useEffect(() => {
     const getList = async () => {
@@ -22,12 +22,16 @@ const MovieGrid = (props) => {
         const params = {};
         switch (props.category) {
           case category.movie:
-            response = await tmdbApi.getMoviesList(movieType.upcoming, {
+            response = await tmdbApi.getMoviesList(type || movieType.upcoming, {
+              params,
+            });
+            break;
+          case category.tv:
+            response = await tmdbApi.getTvList(type || tvType.popular, {
               params,
             });
             break;
           default:
-            response = await tmdbApi.getTvList(tvType.popular, { params });
         }
       } else {
         const params = {
