@@ -14,7 +14,8 @@
     left: 10px;
     right: 10px;
     text-shadow: 0 0 3px black;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
+    opacity: 0;
 
     font-size: 1.125em;
     line-height: 1.4;
@@ -28,16 +29,38 @@
 
   &:hover {
     h3 {
-      bottom: 30px;
+      opacity: 1;
+      bottom: 20px;
     }
   }
 
-  .btn {
+  .btn,
+  &__play-btn {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  &__play-btn {
+    svg {
+      width: 60px;
+    }
+
+    .triangle {
+      stroke-dasharray: 240;
+      stroke-dashoffset: 480;
+      stroke: white;
+      transform: translateY(0);
+      transition: all 0.7s ease-in-out;
+    }
+    .circle {
+      stroke: white;
+      stroke-dasharray: 650;
+      stroke-dashoffset: 1300;
+      transition: all 0.5s ease-in-out;
+    }
   }
 
   &::before {
@@ -60,6 +83,21 @@
 
     &:hover .btn {
       transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    &:hover .movie-card__play-btn {
+      transform: translate(-50%, -50%) scale(1);
+
+      .triangle {
+        stroke-dashoffset: 0;
+        opacity: 1;
+        stroke: #ff0000;
+        animation: trailorPlay 0.7s ease-in-out;
+      }
+      .circle {
+        stroke-dashoffset: 0;
+        stroke: #ff0000;
+      }
     }
   }
 }

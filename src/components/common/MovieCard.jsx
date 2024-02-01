@@ -6,6 +6,7 @@ import Button from "./Button";
 
 import apiConfig from "../../api/apiConfig";
 import { category } from "../../api/tmdbApi";
+import { PlayIcon } from "../icons/PlayIcon";
 
 const MovieCard = (props) => {
   const item = props.item;
@@ -17,9 +18,9 @@ const MovieCard = (props) => {
   return (
     <Link to={link}>
       <div className="movie-card" style={{ backgroundImage: `url(${bg})` }}>
-        <Button>
-          <i className="bx bx-play"></i>
-        </Button>
+        <div className="movie-card__play-btn">
+          <PlayIcon />
+        </div>
         <h3>{item.title || item.name}</h3>
       </div>
     </Link>

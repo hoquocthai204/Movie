@@ -63,16 +63,69 @@
         font-weight: 700;
       }
 
-      .btns > * ~ * {
-        margin-left: 1rem;
-      }
-
       .btns,
       .title,
       .overview {
         opacity: 0;
         transform: translateY(-100px);
-        transition: transform 0.5s ease, opacity 0.5s ease;
+        transition: all 0.5s ease;
+      }
+
+      .btns {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .btn {
+          margin-right: 2rem;
+        }
+
+        .play-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 5px;
+          cursor: pointer;
+          svg {
+            width: 40px;
+
+            @media only screen and (min-width: 768px) {
+              width: 60px;
+            }
+          }
+          .text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: all 0.7s ease-in-out;
+          }
+          .triangle {
+            stroke-dasharray: 240;
+            stroke-dashoffset: 480;
+            stroke: white;
+            transform: translateY(0);
+            transition: all 0.7s ease-in-out;
+          }
+          .circle {
+            stroke: white;
+            stroke-dasharray: 650;
+            stroke-dashoffset: 1300;
+            transition: all 0.5s ease-in-out;
+          }
+          &:hover {
+            .text {
+              color: #ff0000;
+            }
+            .triangle {
+              stroke-dashoffset: 0;
+              opacity: 1;
+              stroke: #ff0000;
+              animation: trailorPlay 0.7s ease-in-out;
+            }
+            .circle {
+              stroke-dashoffset: 0;
+              stroke: #ff0000;
+            }
+          }
+        }
       }
     }
 

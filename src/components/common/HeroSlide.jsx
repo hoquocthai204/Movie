@@ -10,6 +10,7 @@ import apiConfig from "../../api/apiConfig";
 import tmdbApi, { category, movieType } from "../../api/tmdbApi";
 
 import { useHistory } from "react-router";
+import { PlayIcon } from "../icons/PlayIcon";
 
 const HeroSlide = () => {
   SwiperCore.use([Autoplay]);
@@ -97,9 +98,10 @@ const HeroSlideItem = (props) => {
             <Button onClick={() => hisrory.push("/movie/" + item.id)}>
               Watch now
             </Button>
-            <OutlineButton onClick={setModalActive}>
-              Watch trailer
-            </OutlineButton>
+            <div className="play-btn" onClick={setModalActive}>
+              <PlayIcon />
+              <span className="text">Watch Trailer</span>
+            </div>
           </div>
         </div>
         <div className="hero-slide__item__content__poster">
