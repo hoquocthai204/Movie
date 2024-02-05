@@ -77,9 +77,13 @@ iframe {
 
 .section {
   padding: 0 2rem;
+
   &:hover > .section__header {
     > a span {
       width: 90px;
+      &:hover {
+        color: #ff0000;
+      }
     }
   }
 }
@@ -91,16 +95,14 @@ iframe {
   a {
     @include flex(center, space-between);
     white-space: nowrap;
-    color: #ff0000;
     font-weight: 500;
     margin-left: 15px;
 
     span {
+      color: #f18080;
       transition: all 0.4s ease-in-out;
       overflow: hidden;
       width: 0;
     }
   }
-
-  // @include flex(center, space-between);
 }

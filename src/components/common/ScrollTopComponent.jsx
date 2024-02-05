@@ -24,18 +24,9 @@ const ScrollTopComponent = () => {
       onClick={() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }}
+      className="scroll-top-btn"
       style={{
-        position: "fixed",
-        bottom: "50px",
-        width: "50px",
-        height: "50px",
-        right: "20px",
-        color: "red",
-        textAlign: "center",
-        backgroundColor: "transparent",
-        border: "none",
-        zIndex: "10",
-        display: isVisible ? "block" : "none",
+        transform: isVisible ? "scale(1)" : "scale(0)",
       }}
     >
       <img src={scrollTopIcon} alt="" />
